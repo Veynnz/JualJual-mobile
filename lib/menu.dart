@@ -8,7 +8,7 @@ class MyHomePage extends StatelessWidget {
     final String className = 'PBP C'; // Kelas
 
     final List<ItemHomepage> items = [
-        ItemHomepage("Lihat Daftar Produk", Icons.mood, Colors.blueAccent),
+        ItemHomepage("Lihat Daftar Produk", Icons.store, Colors.blueAccent),
         ItemHomepage("Tambah Produk", Icons.add, Colors.lightGreen),
         ItemHomepage("Logout", Icons.logout, Colors.teal),
     ];
@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
       return Scaffold(
         // AppBar adalah bagian atas halaman yang menampilkan judul.
         appBar: AppBar(
-          // Judul aplikasi "Mental Health Tracker" dengan teks putih dan tebal.
+          // Judul aplikasi "JualJual" dengan teks putih dan tebal.
           title: const Text(
             'JualJual',
             style: TextStyle(
@@ -135,16 +135,13 @@ class ItemHomepage {
 }
 
 class ItemCard extends StatelessWidget {
-  // Menampilkan kartu dengan ikon dan nama.
-
   final ItemHomepage item; 
-  
   const ItemCard(this.item, {super.key}); 
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      // Menentukan warna latar belakang dari tema aplikasi.
+      // Menentukan warna latar belakang dari tombol.
       color: item.color,
       // Membuat sudut kartu melengkung.
       borderRadius: BorderRadius.circular(12),
