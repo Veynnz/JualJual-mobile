@@ -1,5 +1,8 @@
 # jualjual
 
+- [TUGAS 7](#tugas-7)
+- [TUGAS 8](#tugas-8)
+
 ## TUGAS 7
 
 1. Jelaskan apa yang dimaksud dengan *stateless widget* dan *stateful widget*, dan jelaskan perbedaan dari keduanya.
@@ -116,3 +119,75 @@
                     SnackBar(content: Text("Kamu telah menekan tombol ${item.name}!"))
                     );
                 },
+
+## TUGAS 8
+
+1. Apa kegunaan *const* di Flutter? Jelaskan apa keuntungan ketika menggunakan *const* pada kode Flutter. Kapan sebaiknya kita menggunakan *const*, dan kapan sebaiknya tidak digunakan?
+
+    *Const* berfungsi untuk membuat suatu objek yang bersifat konstan/*immutable*. *Const* dapat membantu efisiensi penggunaan memori, sebab dengan menggunakan *const* kita bisa menghindari pembuatan objek yang sama berulang kali setiap *UI* di *render*.
+    *Const* sebaiknya digunakan jika objek yang didefinisikan tidak akan berubah selama aplikasi berjalan, sehingga tidak bergantung terhadap keadaan aplikasi.
+    *Const* sebaiknya tidak digunakan jika objek bergantung terhadap keadaan aplikasi, dan bisa berubah berdasarkan keadaan tersebut.
+
+2. Jelaskan dan bandingkan penggunaan *Column* dan *Row* pada *Flutter*. Berikan contoh implementasi dari masing-masing layout widget ini!
+
+    Keduanya berfungsi untuk menata widget dalam suatu container, *Column* untuk menatanya secara vertikal, sedangkan *Row* untuk menatanya secara horizontal.
+    Contoh implementasi:
+    - *Column* : 
+        ```flutter
+        Column(
+            children: <Widget>[
+                Text('Item 1'),
+                Text('Item 2'),
+                Text('Item 3'),
+            ],
+        )
+    Kode ini akan menata 3 teks tersebut secara vertikal.
+    - *Row*:
+        ```flutter
+        Row(
+            children: <Widget>[
+                Icon(Icons.star),
+                Icon(Icons.favorite),
+                Icon(Icons.home),
+            ],
+        )
+    Kode ini akan menata 3 ikon tersebut secara horizontal.
+
+3. Sebutkan apa saja elemen input yang kamu gunakan pada halaman *form* yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+
+    - Elemen input yang digunakan:
+        - TextFormField
+            
+            Untuk menerima nama, harga, dan prediksi produk.
+        - ElevatedButton
+
+            Tombol untuk menyimpan data yang sudah diinput pengguna pada 3 TextFormField di atas.
+    
+    - Elemen input yang tidak digunakan
+        - Checkbox
+
+            Input untuk pilihan ya/tidak.
+        - Radio Button
+
+            Input untuk memilih 1 dari beberapa daftar pilihan.
+        - Switch
+
+            Input untuk memilih antara 2 keadaan *(on/off)*.
+        - DropdownButton
+
+            Input untuk memilih 1 opsi dari daftar dropdown.
+        - Slider
+
+            Input untuk memilih suatu nilai (numerik) dari rentang yang ditentukan.
+        - DatePicker
+            
+            Input untuk memilih tanggal dari suatu kalender.
+
+4.  Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+
+    Dengan menggunakan fitur dari flutter yaitu ThemeData untuk diterapkan pada alikasi. Tema ini menghandle agar aplikasi konsisten dalam styling widget ataupun halamannya.
+    Saya sendiri menggunakan fitur tersebut untuk mengatur konsistensi warna dari aplikasi saya.
+
+5. Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+
+    Saya menangani navigasi dalam aplikasi menggunakan *widget* `Navigator`. *Widget* ini bersifat layaknya sebuah *stack*, sehingga penanganan *view* yang ditampilkan dilakukan melalui fungsi seperti `push()`, `pop()`, dan `pushReplacement()`.
