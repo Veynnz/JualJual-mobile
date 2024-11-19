@@ -193,7 +193,7 @@
 
     Saya menangani navigasi dalam aplikasi menggunakan *widget* `Navigator`. *Widget* ini bersifat layaknya sebuah *stack*, sehingga penanganan *view* yang ditampilkan dilakukan melalui fungsi seperti `push()`, `pop()`, dan `pushReplacement()`.
 
-## TUGAS 8
+## TUGAS 9
 
 1. Jelaskan mengapa kita perlu membuat model untuk melakukan pengambilan ataupun pengiriman data JSON? Apakah akan terjadi error jika kita tidak membuat model terlebih dahulu?
 
